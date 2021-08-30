@@ -1,0 +1,352 @@
+
+
+----------==========----------==========----------==========----------
+
+
+"Eat Your Own Catfood."
+
+
+----------==========----------==========----------==========----------
+
+
+Change Log
+
+
+2021/08/30
+
+
+BUGFIX
+
+
+	win32/win_button.c
+		logic
+			NEW : many bugs are fixed
+	win32/win_button.c
+		Win95 : subclass
+			OLD : crash
+			NEW : fixed
+	win32/win_checkbox.c
+		Win95 : subclass
+			OLD : crash
+			NEW : fixed
+	win32/win_combobox.c
+		HWND property : name space
+			OLD : typo
+			NEW : fixed
+	win32/win_radiobutton.c
+		Win95 : subclass
+			OLD : crash
+			NEW : fixed
+	win32/win_txtbox.c
+		logic
+			NEW : many bugs are fixed
+
+	CatPad
+		Dump : turning off after dumped
+			OLD : access violation
+			NEW : fixed
+			[x] : use after free bug
+		Overwrite Button : hover when key input
+			OLD : blinks
+			NEW : fixed
+	Nyaurism
+		Win95 : Resizer and Formatter
+			OLD : crash at exit
+			NEW : fixed
+	OrangeCat
+		Drag2Select : when inactive window
+			OLD : slow starting
+			NEW : fixed
+
+
+NEW_FEATURE
+
+
+	neutral/bmp/detect.c
+		n_bmp_roundrect_detect_coeff()
+			NEW : 10% faster than older
+	neutral/bmp/filter.c
+		n_bmp_blur() : multi-threading
+			OLD : by pixel count
+			NEW : always do
+			[?] : because of too heavy
+		n_bmp_cornermask()
+			NEW : rich and faster than older
+
+	project/cardgenerator/cardgenerator.c
+		performance
+			NEW : faster than older
+
+	win32/win/_debug.c
+		n_win_scale()
+			NEW : scale getter
+	win32/win/fluent_ui.c
+		n_win_fluent_ui_roundrect_region()
+			NEW : HRGN for popup window
+	win32/win/stdsize.c
+		n_win_stdsize()
+			NEW : more margin is added
+	win32/win_calendar.c
+		Fluent UI
+			NEW : round rect is supported
+	win32/win_colorpicker.c
+		Fluent UI
+			NEW : round rect is supported
+	win32/win_combobox.c
+		Fluent UI
+			NEW : round rect is supported
+	win32/win_simplemenu.c
+		Fluent UI
+			NEW : blur effect available
+	win32/win_txtbox.c
+		LISTBOX_ROUNDRC
+			NEW : listbox mode supports round rect
+	win32/win_txtbox.c
+		N_WIN_TXTBOX_OPTION_USE_INPUT_POPUP
+			NEW : removed
+			[?] : for TxtBox cooperation
+		focus highlight
+			OLD : auto-set
+			NEW : manual set
+			[!] : use .selected_border_onoff to turn on
+			[!] : input popup is auto-set
+			[!] : and use N_WIN_TXTBOX_OPTION_AUTO_FOCUS_RECT
+
+	Nonnon Paint
+		Tool Window
+			NEW : padding is added
+	Nonnon Typing
+		initial screen
+			OLD : blank
+			NEW : "Go!"
+	OrangeCat
+		Breadcrumb Address Band
+			NEW : wait timer is implemented
+	Project Checler
+		Main Window
+			NEW : padding is added
+
+
+----------==========----------==========----------==========----------
+
+
+Change Log
+
+
+2021/08/20
+
+
+BUGFIX
+
+
+	project/macro.c
+		Toolband : WinVista/7 : UxTheme : when a window gets inactive
+			OLD : not redrawn
+			NEW : fixed
+
+	win32/win/fluent_ui.c
+		n_win_fluent_ui_draw_roundrect()
+			OLD : logic is a little inaccurate
+			NEW : fixed
+	win32/win_txtbox/00_helper.c
+		n_win_txtbox_caret()
+			OLD : crash
+			NEW : fixed
+	win32/win_txtbox/07_metrics.c
+		n_win_txtbox_metrics_canvas()
+			OLD : right side is insufficient
+			NEW : fixed
+	win32/win_txtbox/17_draw.c
+		n_win_txtbox_draw_partial() : when horizontal scrolled
+			OLD : no padding at left side
+			NEW : fixed
+	win32/win_txtbox/19_edit.c
+		n_win_txtbox_edit_on_typing()
+			OLD : misbehave when horizontal scroll is needed
+			NEW : fixed
+	win32/win_scrollbar.c
+		N_WIN_SCROLLBAR_OPTION_BIG_ARROWS : vertical bar
+			OLD : not applied / calculation is inaccurate
+			NEW : fixed
+	win32/win.c
+		n_win_dpi_autoscale_disable()
+			OLD : PROCESS_SYSTEM_DPI_AWARE
+			NEW : PROCESS_PER_MONITOR_DPI_AWARE
+			[!] : important for desktop screenshot in simple menu shadow
+	win32/win_iconbutton.c
+		win32 property
+			OLD : handle leak
+			NEW : fixed
+	win32/win_simplemenu.c
+		disabled text color
+			OLD : low contrast with enabled text color
+			NEW : fixed
+
+	All
+		Win10 : Fluent UI
+			OLD : corner is not drawn accurately
+			NEW : fixed
+		Win10 : High-DPI
+			OLD : system tweaks status
+			NEW : fixed
+			[!] : n_win_dpi_autoscale_disable() causes
+		Classic : Fluent UI : color scheme
+			NEW : retuned
+	TxtBox
+		when dragged
+			OLD : crash
+			NEW : fixed
+			[!] : n_win_txtbox_caret() causes
+	nmidi
+		dark mode : canvas
+			OLD : no border
+			NEW : fixed
+	Nonnon Paint
+		window like "Clear Canvas"
+			OLD : closed in faster environment like VirtualBox
+			NEW : fixed
+	OrangeCat
+		Item View : zebra stripe
+			OLD : item background color is inaccurate
+			NEW : fixed
+
+
+NEW_FEATURE
+
+
+	win32/win/dwm.c
+		n_win_dwm_aeroglass_is_on()
+			NEW : Aero Glass checker
+	win32/win/fluent_ui.c
+		n_win_fluent_ui_draw_roundrect()
+			NEW : HDC based round rect drawer
+			[!] : very heavy : use for fallback
+		n_win_fluent_ui_bmp_roundframe()
+			NEW : n_bmp based one-stop round frame drawer
+	win32/win_button.c
+		released
+			NEW : new version of win_iconbutton.c
+			[!] : refactored and usage is changed
+			[!] : win_iconbutton.c will be removed in near future
+	win32/win_simplemenu.c
+		Fluent UI
+			NEW : implemented
+	win32/win_scrollbar.c
+		Fluent UI : arrow font
+			NEW : more real than older
+
+
+----------==========----------==========----------==========----------
+
+
+Change Log
+
+
+2021/08/10
+
+
+BUGFIX
+
+
+	neutral/bmp/draw.c
+		n_bmp_roundrect_thread_main()
+			OLD : ptr_set() after is_accessible()
+			NEW : ptr_set_fast()
+
+	win32/win/icon.c
+		n_win_icon_grayscale()
+			OLD : GetSysColor()
+			NEW : n_win_darkmode_systemcolor_colorref2argb_ui()
+	win32/win_txtbox/17_draw.c
+		n_win_txtbox_draw_singleline()
+			OLD : misbehave when -1
+			NEW : fixed
+		n_win_txtbox_draw_caret()
+			OLD : .ime is not set when out-of-bound
+			NEW : fixed
+		n_win_txtbox_draw_partial() : LISTBOX
+			OLD : a half-visible item is not drawn
+			NEW : fixed
+	win32/win_txtbox/18_selection.c
+		n_win_txtbox_selection_cat()
+			OLD : misbehave
+			NEW : fixed
+	win32/win_txtbox/19_edit.c
+		n_win_txtbox_edit_on_typing() : when a caret is out-of-screen
+			OLD : nothing happens
+			NEW : clamp scroll position
+	win32/win_txtbox/21_menu.c
+		n_win_txtbox_menu_paste()
+			OLD : move to tail
+			NEW : n_win_txtbox_edit_on_typing()
+	win32/win_txtbox/22_proc_mouse.c
+		n_win_txtbox_proc_mouse()
+			OLD : glitch
+			NEW : fixed
+	win32/win_iconbutton.c
+		WinXP : GDI+
+			OLD : conflict with WM_PRINTCLIENT
+			NEW : fixed
+
+	_@tutorial
+		code
+			OLD : hard to beginners
+			NEW : simpler
+	Neko no Te
+		WinXP : input popup : window animation
+			OLD : draw error
+			NEW : fixed
+	Nyaurism
+		Resizer : Input Field
+			OLD : glitch
+			NEW : fixed
+			[x] : TxtBox causes
+
+
+NEW_FEATURE
+
+
+	all
+		GUI style
+			NEW : fluent UI available
+	win32/win/dwm.c
+		n_win_dwm_windowcolor_ui()
+			NEW : current window color getter
+		n_win_dwm_roundrect_corner_color()
+			NEW : parent background getter
+	win32/win/fluent_ui.c
+		released
+			NEW : Win11-like roundrect onestop enabler
+	win32/win_scrollbar.c
+		N_WIN_SCROLLBAR_STYLE_FLUENT_UI
+			NEW : rounded style
+	win32/win_txtbox.c
+		ONELINE : auto-scroll
+			OLD : Edit Control-like
+			NEW : by character
+		N_WIN_TXTBOX_CARET_OUTBOUND_NONE/LEFT/RIGHT
+			NEW : caret outbound checker
+		.ime_outbound
+			NEW : caret outbound checker
+		ONELINE : ROUNDRC
+			NEW : round rect implementation
+			[!] : border and highlight will be round rect
+			[!] : for WinXP Luna, WinVista Aero and Win11 Fluent Design
+
+	All
+		non-classic environment
+			NEW : fluent UI available
+			[!] : you can use INI file to turn on in older Windows
+	Character Map
+		menu-click
+			NEW : zoom on/off available
+	Nonnon Typing
+		released
+			NEW : touch typing trainer
+	OrangeCat
+		Info View : input field
+			NEW : highlight will be round rect
+
+
+----------==========----------==========----------==========----------
+
