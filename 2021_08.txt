@@ -27,7 +27,7 @@ BUGFIX
 		ONELINE : Fluent UI
 			OLD : highlight is not drawn as round rect
 			NEW : fixed
-		when pasted ] when getting to be longest line
+		when pasted : when getting to be longest line
 			OLD : horizontal scrollbar is not redrawn
 			NEW : fixed
 
