@@ -12,6 +12,32 @@
 Change Log
 
 
+2021/08/30 #1 : 2021/08/31
+
+
+BUGFIX
+
+
+	neutral/bmp/filter.c
+		n_bmp_cornermask() : fast mode
+			OLD : broken
+			NEW : fixed
+
+	win32/win_txtbox.c
+		ONELINE : Fluent UI
+			OLD : highlight is not drawn as round rect
+			NEW : fixed
+		when pasted ] when getting to be longest line
+			OLD : horizontal scrollbar is not redrawn
+			NEW : fixed
+
+
+----------==========----------==========----------==========----------
+
+
+Change Log
+
+
 2021/08/30
 
 
