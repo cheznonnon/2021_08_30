@@ -18,7 +18,7 @@ Change Log
 BUGFIX
 
 
-	win32/win/stdsize/c
+	win32/win/stdsize.c
 		n_win_stdsize_radio() : classic style
 			OLD : not beatiful
 			NEW : fixed
