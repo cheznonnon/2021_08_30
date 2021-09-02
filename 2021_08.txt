@@ -12,6 +12,47 @@
 Change Log
 
 
+2021/08/30 #3 : 2021/09/02
+
+
+BUGFIX
+
+
+	win32/win/stdsize/c
+		n_win_stdsize_radio() : classic style
+			OLD : not beatiful
+			NEW : fixed
+	win32/win_button.c
+		simple usage
+			OLD : not supported
+			NEW : fixed
+			[!] : pressed state will not be restored automatically
+	win32/win_txtbox.c
+		right-side margin
+			OLD : too wide
+			NEW : fixed
+
+
+NEW_FEATURE
+
+
+	win32/win_checkbox.c
+		flicker prevention
+			NEW : implemented
+	win32/win_simplemenu.c
+		flicker prevention
+			NEW : implemented
+	win32/win_radiobutton.c
+		flicker prevention
+			NEW : implemented
+
+
+----------==========----------==========----------==========----------
+
+
+Change Log
+
+
 2021/08/30 #2 : 2021/09/01
 
 
