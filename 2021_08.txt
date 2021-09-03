@@ -12,6 +12,62 @@
 Change Log
 
 
+2021/08/30 #4 : 2021/09/03
+
+
+BUGFIX
+
+
+	win32/win/fluent_ui.c
+		n_win_fluent_ui_progress()
+			OLD : progressbar parameters are not restored
+			NEW : fixed
+	win32/win_button.c
+		n_win_button_grayed_onoff()
+			OLD : inaccurate
+			NEW : fixed
+		Win9x : 16bpp : color
+			OLD : inaccurate
+			NEW : fixed
+	win32/win_checkbox.c
+		Win9x : 16bpp : color
+			OLD : inaccurate
+			NEW : fixed
+	win32/win_radiobutton.c
+		Win9x : 16bpp : color
+			OLD : inaccurate
+			NEW : fixed
+	win32/win_simplemenu.c
+		Classic Style : separator
+			OLD : not drawn
+			NEW : fixed
+	win32/win_txtbox.c
+		EDITBOX : at launch
+			OLD : not redrawn
+			NEW : fixed
+		performance
+			OLD : slow
+			NEW : fixed
+			[x] : round corner causes
+		WinVista : border style
+			OLD : inaccurate
+			NEW : fixed
+
+
+NEW_FEATURE
+
+
+	win32/win_groupbox.c
+		Fluent UI
+			NEW : supported
+
+
+----------==========----------==========----------==========----------
+
+
+Change Log
+
+
 2021/08/30 #3 : 2021/09/02
 
 
