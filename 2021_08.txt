@@ -12,6 +12,52 @@
 Change Log
 
 
+2021/08/30 #5 : 2021/09/04
+
+
+BUGFIX
+
+
+	win32/win/set.c
+		n_win_set() : RESTORE : maximized window
+			OLD : not working accurately
+			NEW : deprecated
+			[!]:  SetWindowPlacement() is needed
+	win32/win_calendar.c
+		performance
+			OLD : too heavy
+			NEW : fixed
+
+	CatPad
+		starting with maximized window : when restored
+			OLD : broken
+			NEW : fixed
+			[x] : n_win_set() causes
+		regression : WinXP : window : at launch
+			OLD : misbehave
+			NEW : fixed
+			[x] : recall in August 30 release
+
+
+NEW_FEATURE
+
+
+	win32/win/_debug.c
+		n_win_clear()
+			NEW : comment-out'ed
+			[?] : slow, use other solutions
+	win32/win/fluent_ui.c
+		n_win_fluent_ui_draw_roundrect(), draw_mask()
+			NEW : comment-out'ed
+			[?] : slow, use other solutions
+
+
+----------==========----------==========----------==========----------
+
+
+Change Log
+
+
 2021/08/30 #4 : 2021/09/03
 
 
