@@ -12,6 +12,41 @@
 Change Log
 
 
+2021/08/30 #6 : 2021/09/05
+
+
+BUGFIX
+
+
+	all
+		Win10 : toolband : Light Theme
+			OLD : not working accurately and too much heavy
+			NEW : deprecated
+			[!] : using title bar color is also deprecated
+	win32/win/stdsize.c
+		n_win_stdsize() : Classic Style and XP : height
+			OLD : insufficient
+			NEW : fixed
+	win32/win_txtbox.c
+		EDITBOX : Fluent UI
+			OLD : border is classic style
+			NEW : fixed
+		ONELINE : Classic Style
+			OLD : lower side is not drawn
+			NEW : fixed
+
+	CatPad
+		Win10 : at launch : performance
+			NEW : much lighter
+			[?] : Toolband DWM mode causes
+
+
+----------==========----------==========----------==========----------
+
+
+Change Log
+
+
 2021/08/30 #5 : 2021/09/04
 
 
