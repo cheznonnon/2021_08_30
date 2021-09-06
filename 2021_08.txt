@@ -12,6 +12,42 @@
 Change Log
 
 
+2021/08/30 #7 : 2021/09/06
+
+
+BUGFIX
+
+
+	win32/win_txtbox.c
+		Visual Style : combo popup
+			OLD : corner is not beautiful
+			NEW : no rounding
+
+
+NEW_FEATURE
+
+
+	win32/win_smallbutton_direct.c
+		n_win_smallbutton_direct_bitmap_draw()
+			OLD : unused code
+			NEW : commnent-out'ed
+	win32/win_txtbox.c
+		N_WIN_TXTBOX_STYLE_CMB_BOX
+			NEW : combo box support
+		Vista/7 : Visual Style
+			NEW : more similar to system combobox
+
+	Nyaurism
+		filter list
+			NEW : spacing available
+
+
+----------==========----------==========----------==========----------
+
+
+Change Log
+
+
 2021/08/30 #6 : 2021/09/05
 
 
