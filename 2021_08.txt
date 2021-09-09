@@ -12,6 +12,37 @@
 Change Log
 
 
+2021/08/30 #10 : 2021/09/09
+
+
+BUGFIX
+
+
+	win32/win_button.c
+		refresh
+			OLD : blink when Explorer runs
+			NEW : fixed
+
+
+NEW_FEATURE
+
+
+	win32/win/dwm.c
+		renamed
+			OLD : n_win_dwm_is_blurred()
+			OLD : n_win_dwm_is_accent_color_used()
+
+	All
+		Toolband : WinVista/7/8/10 : window color
+			NEW : revived
+
+
+----------==========----------==========----------==========----------
+
+
+Change Log
+
+
 2021/08/30 #9 : 2021/09/08
 
 
